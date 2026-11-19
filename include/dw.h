@@ -3,9 +3,9 @@
 
 class Employee {
 public:
-  explicit Employee(double base_salary);
+  Employee(double base_salary);
   virtual double calculate_pay() const = 0;
-  virtual ~Employee() = default;
+  virtual ~Employee();
 
 protected:
   double m_base_salary;
@@ -13,7 +13,7 @@ protected:
 
 class Salaried_employee : public Employee {
 public:
-  explicit Salaried_employee(double base_salary);
+  Salaried_employee(double base_salary);
   double calculate_pay() const override;
 };
 
